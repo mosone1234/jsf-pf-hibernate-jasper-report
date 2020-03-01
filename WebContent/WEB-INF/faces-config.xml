@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+ <managed-bean>
+  <managed-bean-name>exampleController</managed-bean-name>
+  <managed-bean-class>controller.ExampleController</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+  <managed-property>
+   <property-name>firstName</property-name>
+   <property-class>java.lang.String</property-class>
+   <value/>
+  </managed-property>
+  <managed-property>
+   <property-name>lastName</property-name>
+   <property-class>java.lang.String</property-class>
+   <value/>
+  </managed-property>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>productController</managed-bean-name>
+  <managed-bean-class>controller.ProductController</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+  <managed-property>
+   <property-name>exam</property-name>
+   <property-class>controller.example1</property-class>
+   <value/>
+  </managed-property>
+ </managed-bean>
+ <application/>
+</faces-config>

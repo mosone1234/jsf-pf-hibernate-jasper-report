@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<body>
+	<h:form id="carForm">
+	    <p:fieldset id="availableCarsField" legend="Create Product">
+	    	<p:growl id="growl" showSummary="true" showDetail="true" keepAlive="true" life="3000">
+    			<p:autoUpdate />
+			</p:growl> 
+			<h:form> 
+			   <h5>Name</h5>
+			   <span class="ui-float-label">
+			       <p:inputText id="float-input" value="#{productController.pro.name}" />
+			   </span>
+			    <h5>Description</h5>
+			    <p:inputTextarea value="#{productController.pro.description}" rows="5" cols="30" counter="display" maxlength="10" counterTemplate="{0} characters remaining." autoResize="false" />
+			    <br />
+			    <h:outputText id="display" />
+			   <h5>Price</h5>
+			   <span class="ui-float-label">
+			       <p:inputText type="number" id="float-input-2" value="#{productController.pro.price}" />
+			   </span>
+			    <p:commandButton value="Create" action="#{productController.createProduct()}" style="margin-right:20px; backgroud: blue;" styleClass="ui-priority-primary" />
+			</h:form>
+		</p:fieldset>
+	</h:form>
+</body>
+</html>

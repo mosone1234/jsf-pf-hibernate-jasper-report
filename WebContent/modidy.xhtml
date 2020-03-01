@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<body>
+<div style="width:100%;font-size:36px;line-height:48px;background-color:navy;color:white">My Facelet Application</div>
+	<h1>JSF Backing Bean Annotation Configuration</h1>
+	<h:form prependId="false">
+		<h:panelGrid colums="2" cellpadding="2" cellspacing="2">
+			<h:outputText value="Name"></h:outputText>
+			<h:inputText value="#{productController.pro.name}"></h:inputText>
+		</h:panelGrid>
+		<h:panelGrid colums="2" cellpadding="2" cellspacing="2">
+			<h:outputText value="Description"></h:outputText>
+			<h:inputText value="#{productController.pro.description}"></h:inputText>
+		</h:panelGrid>
+		<h:panelGrid colums="2" cellpadding="2" cellspacing="2">
+			<h:outputText value="Price"></h:outputText>
+			<h:inputText value="#{productController.pro.price}"></h:inputText>
+		</h:panelGrid>
+		<h:commandButton value="Update" action="#{productController.updateProduct()}"></h:commandButton>	
+	</h:form>
+</body>
+</html>
